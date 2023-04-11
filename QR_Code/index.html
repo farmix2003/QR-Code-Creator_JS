@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-top: 70px;
+        margin-left: 20%;
+      }
+      .elements {
+        display: block;
+        width: 400px;
+        border: 1px solid black;
+        height: 450px;
+        background-color: darkcyan;
+      }
+      img{
+        display: block;
+        margin-top: 100px;
+        margin-bottom: 5px;
+        margin-left: 115px;
+      }
+   input{
+    display: block;
+    margin-left: 100px;
+   }
+      button {
+        margin-top: 10px;
+        display: block;
+        margin-left: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <d class="elements">
+       
+          <img src="" alt="" />
+    
+    
+          <input type="text" />
+
+        
+          <button type="submit">Generate</button>
+
+      </div>
+    </div>
+    <script>
+      const img = document.querySelector("img"),
+        input = document.querySelector("input"),
+        button = document.querySelector("button"),
+        api1 = "https://api.qrserver.com/v1/",
+        api2 = "create-qr-code/?size=150x150&data=";
+      button.addEventListener("click", () => {
+        img.src = `${api1}${api2}${input.value}`;
+      });
+    </script>
+  </body>
+</html>
